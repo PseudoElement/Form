@@ -3,12 +3,12 @@ export function validateName() {
      const nameValue = nameInput.value.trim();
 
      if (nameValue === "") {
-          nameInput.nextElementSibling.textContent = "Обязательное поле";
+          nameInput.nextElementSibling.innerText = "Обязательное поле";
           return false;
      }
 
      if (nameValue.length < 2 || nameValue.length > 25) {
-          nameInput.nextElementSibling.textContent = "Имя должно быть от 2 до 25 символов";
+          nameInput.nextElementSibling.innerText = "Имя должно быть от 2 до 25 символов";
           return false;
      }
 

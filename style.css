@@ -1,15 +1,23 @@
+* {
+     margin: 0;
+     padding: 0;
+}
 body {
      display: flex;
+     height: 100%;
+     min-height: 100vh;
      align-items: center;
      justify-content: center;
      background-color: rgba(0, 0, 0, 0.2);
+     font-family: "Golos Text", sans-serif;
 }
 .form {
      display: flex;
+     box-sizing: border-box;
      padding: 20px;
      flex-direction: column;
      align-items: flex-start;
-     background: rgba(66, 66, 187, 0.1);
+     background: rgba(66, 66, 187, 0);
      border-radius: 10px;
      box-shadow: 0 0 15px 3px gray;
 }
@@ -34,7 +42,7 @@ body {
      background: transparent;
 }
 .form__input:focus {
-     border: 2px solid rgb(25, 142, 189);
+     border: 2px solid rgb(8, 0, 246);
      outline: none;
 }
 
@@ -45,16 +53,25 @@ body {
 }
 .form__submit {
      align-self: center;
+     /* width: 100%; */
      background: transparent;
      cursor: pointer;
-     font-size: 25px;
+     font-size: 20px;
      border-radius: 10px;
      padding: 10px;
      transition: all 0.2s;
      background: greenyellow;
      background-color: #69b1ff;
+     font-family: "Golos Text", sans-serif;
 }
+
 .form__submit:hover {
      background: rgba(72, 231, 178, 0.5);
      color: white;
+}
+@media screen and (max-width: 1024px) {
+     .form__submit,
+     .form__input {
+          font-size: 15px;
+     }
 }
