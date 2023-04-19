@@ -67,7 +67,7 @@ body {
 
 .form__submit:hover {
      background: rgba(72, 231, 178, 0.5);
-     color: white;
+     color: rgb(36, 88, 234);
 }
 @media screen and (max-width: 1024px) {
      .form__submit,

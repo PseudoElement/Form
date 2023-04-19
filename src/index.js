@@ -6,6 +6,7 @@ const emailInput = document.getElementById("email");
 const nameInput = document.getElementById("name");
 const surnameInput = document.getElementById("surname");
 const form = document.getElementById("form");
+const confirmPassword = document.getElementById("confirm-password");
 
 form.addEventListener("submit", function (event) {
      event.preventDefault();
@@ -31,6 +32,12 @@ form.addEventListener("submit", function (event) {
           fetch("https://jsonplaceholder.typicode.com/posts", {
                method: "POST",
                body: JSON.stringify(data),
-          });
+          }).catch((e) => console.error("Request error: ", e));
+          nameInput.value = "";
+          surnameInput.value = "";
+          emailInput.value = "";
+          birthdayInput.value = "";
+          passwordInput.value = "";
+          confirmPassword.value = "";
      }
 });
